@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+
+    <title><%= webpackConfig.metadata.title %></title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<%= webpackConfig.metadata.title %>">
+
+    <!-- use http://www.favicon-generator.org/ to replace files in public/icon-->
+    <link rel="icon" type="image/png" sizes="114x107" href="./assets/icon/favicon.png">
+    <!-- end favicon -->
+
+    <!-- base url -->
+    <base href="<%= webpackConfig.metadata.baseUrl %>">
+   <!--codemirror-->
+    <link rel="stylesheet" href="assets/vendor/codemirror/codemirror.css">
+    <link rel="stylesheet" href="assets/vendor/codemirror/material.css">
+    <link rel="stylesheet" href="assets/vendor/codemirror/monokai.css">
+    <script src="assets/vendor/codemirror/codemirror.js"></script>
+    <script src="assets/vendor/codemirror/xml.js"></script>
+    <script src="assets/vendor/codemirror/javascript.js"></script>
+    <script src="assets/vendor/codemirror/css.js"></script>
+    <script src="assets/vendor/codemirror/htmlmixed.js"></script>
+    <script src="assets/vendor/codemirror/sublime.js"></script>
+</head>
+
+<body>
+
+<app>
+    Loading...
+</app>
+<% if (webpackConfig.metadata.ENV === 'development') { %>
+<!-- Webpack Dev Server reload -->
+<script src="/webpack-dev-server.js"></script>
+<% } %>
+
+</body>
+</html>
